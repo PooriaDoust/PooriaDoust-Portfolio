@@ -1,0 +1,21 @@
+{
+  "name": "Pooria Mohammad Doust Portfolio",
+  "short_name": "Pooria Portfolio",
+  "description": "Professional portfolio of Pooria Mohammad Doust - IT Support, Networking, Programming, and more.",
+  "start_url": "/",
+  "display": "standalone",
+  "background_color": "#18181b",
+  "theme_color": "#0a0a0a",
+  "icons": [
+    {
+      "src": "/profile-icon.png",
+      "sizes": "192x192",
+      "type": "image/png"
+    },
+    {
+      "src": "/profile-icon.png",
+      "sizes": "512x512",
+      "type": "image/png"
+    }
+  ]
+}

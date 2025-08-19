@@ -1,0 +1,117 @@
+@import "tailwindcss";
+
+:root {
+  --background: transparent;
+  --background-dark: transparent;
+  --primary: #2563eb;
+  --accent: #d946ef;
+  --secondary: #34d399;
+  --gradient-from: #2563eb;
+  --gradient-to: #d946ef;
+  --text-light: #27272a;
+  --text-dark: #e4e4e7;
+  --text-dark-soft: rgba(228, 228, 231, 0.75);
+  --muted: #a1a1aa;
+  --border: #e4e4e7;
+  --card: #fff;
+  --card-shadow: 0 4px 24px 0 rgba(37,99,235,0.08);
+}
+
+@theme inline {
+  --color-background: transparent;
+  --color-foreground: var(--text-light);
+  --font-sans: var(--font-geist-sans);
+  --font-mono: var(--font-geist-mono);
+}
+
+@media (prefers-color-scheme: dark) {
+  :root {
+    --background: transparent;
+    --background-dark: transparent;
+    --primary: #2563eb;
+    --accent: #d946ef;
+    --secondary: #34d399;
+    --gradient-from: #2563eb;
+    --gradient-to: #d946ef;
+    --text-light: #e4e4e7;
+    --text-dark: #e4e4e7;
+    --text-dark-soft: rgba(228, 228, 231, 0.75);
+    --muted: #a1a1aa;
+    --border: #e4e4e7;
+    --card: #23272f;
+    --card-shadow: 0 4px 24px 0 rgba(37,99,235,0.12);
+  }
+}
+
+body {
+  background: transparent !important;
+  color: #374151;
+  font-family: 'Poppins', var(--font-poppins), ui-sans-serif, system-ui, sans-serif;
+  transition: background 0.3s, color 0.3s;
+}
+
+html, body {
+  background: #18181b !important;
+  background-color: #18181b !important;
+}
+
+.custom-scrollbar {
+  scrollbar-width: thin;
+  scrollbar-color: #6366f1 #f9fafb;
+}
+
+.custom-scrollbar::-webkit-scrollbar {
+  width: 10px;
+  background: #f9fafb;
+}
+
+.custom-scrollbar::-webkit-scrollbar-thumb {
+  background: linear-gradient(135deg, #6366f1, #10b981);
+  border-radius: 8px;
+  border: 2px solid #f9fafb;
+}
+
+.custom-scrollbar::-webkit-scrollbar-track {
+  background: #f9fafb;
+  border-radius: 8px;
+}
+
+.bg-card, .bg-gradient-accent, .bg-primary-gradient, .bg-section-heading {
+  background: transparent !important;
+}
+
+.text-gradient-heading {
+  background: linear-gradient(to right, #2563eb, #d946ef);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  color: transparent;
+}
+
+.text-muted {
+  color: var(--muted);
+}
+
+.border-default {
+  border-color: var(--border);
+}
+
+/* Global text styling for consistent soft appearance */
+.text-content-soft {
+  color: var(--text-dark-soft) !important;
+}
+
+/* Override default text-dark to be softer */
+[style*="var(--text-dark)"] {
+  color: var(--text-dark-soft) !important;
+}
+
+/* Make all text using text-dark variable softer by default */
+.text-\[var\(--text-dark\)\] {
+  color: var(--text-dark-soft) !important;
+}
+
+/* Make favicon circular */
+link[rel="icon"], link[rel="shortcut icon"], link[rel="apple-touch-icon"] {
+  border-radius: 50% !important;
+}
